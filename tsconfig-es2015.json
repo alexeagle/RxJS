@@ -1,0 +1,24 @@
+{
+  "angularCompilerOptions": {
+    "skipTemplateCodegen": true,
+    "annotateForClosureCompiler": true
+  },
+  //     "compile_dist_es6_for_docs":
+  //"tsc   ./dist/es6/src/Rx.ts ./dist/es6/src/add/observable/of.ts
+  // ./dist/es6/src/MiscJSDoc.ts -m es2015
+  // --sourceMap --outDir ./dist/es6 --target ES6 -d --diagnostics
+  // --pretty --noImplicitAny --noImplicitReturns --noImplicitThis
+  // --suppressImplicitAnyIndexErrors --moduleResolution node",
+
+  "compilerOptions": {
+    "target": "es6",
+    "outDir": "dist/es6",
+    "suppressImplicitAnyIndexErrors": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true
+  },
+  "files": [
+    "src/Rx.ts",
+    "src/add/observable/of.ts"
+  ]
+}

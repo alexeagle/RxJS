@@ -75,6 +75,7 @@
     "compile_dist_cjs": "tsc ./dist/cjs/src/Rx.ts ./dist/cjs/src/add/observable/of.ts                         -m commonjs --lib es5,es2015.iterable,es2015.collection,es2015.promise,dom --sourceMap --outDir ./dist/cjs --target ES5 -d --diagnostics --pretty --noImplicitAny --noImplicitReturns --noImplicitThis --suppressImplicitAnyIndexErrors --moduleResolution node",
     "compile_module_es6": "tsc                                          ./dist/es6/src/Rx.ts ./dist/es6/src/add/observable/of.ts                             -m es2015   --sourceMap --outDir ./dist/es6 --target ES5 -d --diagnostics --pretty --noImplicitAny --noImplicitReturns --noImplicitThis --suppressImplicitAnyIndexErrors --moduleResolution node --noEmitHelpers --lib es5,es2015.iterable,es2015.collection,es2015.promise,dom ",
     "compile_dist_es6_for_docs": "tsc                                 ./dist/es6/src/Rx.ts ./dist/es6/src/add/observable/of.ts ./dist/es6/src/MiscJSDoc.ts -m es2015   --sourceMap --outDir ./dist/es6 --target ES6 -d --diagnostics --pretty --noImplicitAny --noImplicitReturns --noImplicitThis --suppressImplicitAnyIndexErrors --moduleResolution node",
+    "compile_dist_es6_for_closure": "node node_modules/@angular/tsc-wrapped/src/main.js -p tsconfig-es2015.json",
     "cover": "shx rm -rf dist/cjs && tsc src/Rx.ts src/add/observable/of.ts -m commonjs --lib es5,es2015.iterable,es2015.collection,es2015.promise,dom --outDir dist/cjs --sourceMap --target ES5 -d && nyc --reporter=lcov --reporter=html --exclude=spec/support/**/* --exclude=spec-js/**/* --exclude=node_modules mocha --opts spec/support/default.opts spec-js",
     "decision_tree_widget": "cd doc/decision-tree-widget && npm run build && cd ../..",
     "doctoc": "doctoc CONTRIBUTING.md",
@@ -144,6 +145,7 @@
   },
   "homepage": "https://github.com/ReactiveX/RxJS",
   "devDependencies": {
+    "@angular/tsc-wrapped": "alexeagle/tsc-wrapped-builds",
     "benchmark": "^2.1.0",
     "benchpress": "2.0.0-beta.1",
     "chai": "^3.5.0",
