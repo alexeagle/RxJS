@@ -1,0 +1,6 @@
+alias(
+    name = "rxjs",
+    actual = "//src:rxjs",
+)
+
+exports_files(["tsconfig.base.json"])

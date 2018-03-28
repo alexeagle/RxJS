@@ -8,6 +8,6 @@ ts_library(
     module_name = "rxjs/operators",
     module_root = "index.d.ts",
     node_modules = "@build_bazel_rules_typescript_tsc_wrapped_deps//:node_modules",
-    tsconfig = "//:tsconfig.json",
-    deps = ["//:lib"],
+    tsconfig = "//:tsconfig.base.json",
+    deps = ["//src"],
 )
